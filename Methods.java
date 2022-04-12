@@ -20,7 +20,7 @@ public class Methods {
         for (int count=0; count<BankingApp.accounts.length; count++){
         //Ask user to input amount to be added to the account and store the value to amount
         System.out.println("Enter the amount you want to add: ");  
-        double amount = sc.nextDouble();  
+        float amount = sc.nextFloat();  
             if(amount<500){
                 System.out.println("Cannot add the amount entered.\nA minimum amount of 500 is required to add funds.");
                 
@@ -45,7 +45,7 @@ public class Methods {
         for (int count=0; count < BankingApp.accounts.length; count++){
         //Ask user to input amount to be withdrawn from the account and store the value to amount
         System.out.println("Enter the amount you want to withdraw: ");  
-        double amount = sc.nextDouble();
+        float amount = sc.nextFloat();
             if(amount<=BankingApp.balance[count] && amount >= 500){
                 //Subtract the amount entered from the balance and assign the result to balance
                 BankingApp.balance[count] = BankingApp.balance[count] - amount;  
@@ -74,11 +74,12 @@ public class Methods {
             //Assign currentCurrency to currency[1] which is "USD"
             BankingApp.currentCurrency=BankingApp.currency[1];
             currentCurrency = BankingApp.currency[1];
+            float conversionRate = 0.019f;
             //Display information of the conversion
-            System.out.println("1 PHP = 0.019185473 USD");
-            System.out.println("PHP "+BankingApp.balance[count]+ " = USD "+(BankingApp.balance[count]*0.019185473));
+            System.out.println("1 PHP = "+conversionRate + " USD");
+            System.out.println("PHP "+BankingApp.balance[count]+ " = USD "+(BankingApp.balance[count]*conversionRate));
             //Calculate the conversion by multiplying balance to the conversion rate and assign the result to balance
-            BankingApp.balance[count] = BankingApp.balance[count] * 0.019185473;
+            BankingApp.balance[count] = BankingApp.balance[count] * conversionRate;
             System.out.println("Conversion Successful.");
             //System.out.println("Name: " + BankingApp.accounts[count]+ " Funds: " + BankingApp.balance[count] +"Current Currency:" +currentCurrency);
         }
@@ -94,11 +95,12 @@ public class Methods {
             //Assign currentCurrency to currency[2] which is "JPY"
             BankingApp.currentCurrency=BankingApp.currency[2];
             currentCurrency = BankingApp.currency[2];
+            float conversionRate = 2.41f;
             //Display information of the conversion
-            System.out.println("1 PHP = 2.41 JPY");
-            System.out.println("PHP "+BankingApp.balance[count]+ " = JPY" +(BankingApp.balance[count]*2.41));
+            System.out.println("1 PHP = "+conversionRate + " JPY");
+            System.out.println("PHP "+BankingApp.balance[count]+ " = JPY" +(BankingApp.balance[count]*conversionRate));
             //Calculate the conversion by multiplying balance to the conversion rate and assign the result to balance
-            BankingApp.balance[count] = BankingApp.balance[count] * 2.41;
+            BankingApp.balance[count] = BankingApp.balance[count] * conversionRate;
             System.out.println("Conversion Successful.");
             //System.out.println("Name: " + BankingApp.accounts[count]+ " Funds: " + BankingApp.balance[count] +"Current Currency:" +currentCurrency);
         }
@@ -114,11 +116,12 @@ public class Methods {
             //Assign currentCurrency to currency[0] which is "PHP"
             BankingApp.currentCurrency=BankingApp.currency[0];
             currentCurrency = BankingApp.currency[0];
+            float conversionRate = 52.10f;
             //Display information of the conversion
-            System.out.println("1 USD = 52.12277 PHP");
-            System.out.println("USD " + BankingApp.balance[count]+ " = PHP " +(BankingApp.balance[count]*52.12277));
+            System.out.println("1 USD = "+conversionRate + " PHP");
+            System.out.println("USD " + BankingApp.balance[count]+ " = PHP " +(BankingApp.balance[count]*conversionRate));
             //Calculate the conversion by multiplying balance to the conversion rate and assign the result to balance
-            BankingApp.balance[count] = BankingApp.balance[count] * 52.12277;
+            BankingApp.balance[count] = BankingApp.balance[count] * conversionRate;
             System.out.println("Conversion Successful.");
             //System.out.println("Name: " + BankingApp.accounts[count]+ " Funds: " + BankingApp.balance[count] +"Current Currency:" +currentCurrency);
         }
@@ -133,11 +136,12 @@ public class Methods {
             //Assign currentCurrency to currency[2] which is "JPY"
             BankingApp.currentCurrency=BankingApp.currency[2];
             currentCurrency = BankingApp.currency[2];
+            float conversionRate = 125.60f;
             //Display information of the conversion
-            System.out.println("1 USD = 125.40972 JPY");
-            System.out.println("USD " +BankingApp.balance[count]+ " = JPY " +(BankingApp.balance[count]*125.40972));
+            System.out.println("1 USD = "+conversionRate + " JPY");
+            System.out.println("USD " +BankingApp.balance[count]+ " = JPY " +(BankingApp.balance[count]*conversionRate));
             //Calculate the conversion by multiplying balance to the conversion rate and assign the result to balance
-            BankingApp.balance[count] = BankingApp.balance[count] * 125.40972;
+            BankingApp.balance[count] = BankingApp.balance[count] * conversionRate;
             System.out.println("Conversion Successful.");
             //System.out.println("Name: " + BankingApp.accounts[count]+ " Funds: " + BankingApp.balance[count] +" Current Currency:" +currentCurrency);
         }
@@ -153,11 +157,12 @@ public class Methods {
             //Assign currentCurrency to currency[0] which is "PHP"
             BankingApp.currentCurrency=BankingApp.currency[0];
             currentCurrency = BankingApp.currency[0];
+            float conversionRate = 0.41f;
             //Display information of the conversion
-            System.out.println("1 JPY = 0.4154494 PHP");
-            System.out.println("JPY " + BankingApp.balance[count]+ " = PHP " +(BankingApp.balance[count]*0.4154494));
+            System.out.println("1 JPY = "+conversionRate + " PHP");
+            System.out.println("JPY " + BankingApp.balance[count]+ " = PHP " +(BankingApp.balance[count]*conversionRate));
             //Calculate the conversion by multiplying balance to the conversion rate and assign the result to balance
-            BankingApp.balance[count] = BankingApp.balance[count] * 0.4154494;
+            BankingApp.balance[count] = BankingApp.balance[count] * conversionRate;
             System.out.println("Conversion Successful.");
             //System.out.println("Name: " + BankingApp.accounts[count]+ " Funds: " + BankingApp.balance[count] +"Current Currency:" +currentCurrency);
         }
@@ -172,11 +177,12 @@ public class Methods {
             //Assign currentCurrency to currency[1] which is "USD"
             BankingApp.currentCurrency=BankingApp.currency[1];
             currentCurrency = BankingApp.currency[1];
+            float conversionRate = 0.0080f;
             //Display information of the conversion
-            System.out.println("1 JPY = 0.0079740937 USD");
-            System.out.println("JPY " + BankingApp.balance[count]+ " = USD " +(BankingApp.balance[count]*0.0079740937));
+            System.out.println("1 JPY = "+conversionRate + " USD");
+            System.out.println("JPY " + BankingApp.balance[count]+ " = USD " +(BankingApp.balance[count]*conversionRate));
             //Calculate the conversion by multiplying balance to the conversion rate and assign the result to balance
-            BankingApp.balance[count] = BankingApp.balance[count] * 0.0079740937;
+            BankingApp.balance[count] = BankingApp.balance[count] * conversionRate;
             System.out.println("Conversion Successful.");
             //System.out.println("Name: " + BankingApp.accounts[count]+ " Funds: " + BankingApp.balance[count] +" Current Currency:" +currentCurrency);
         }
@@ -188,6 +194,3 @@ public class Methods {
 
     
 }
-
-
-

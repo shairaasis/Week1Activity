@@ -3,7 +3,7 @@ public class BankingApp {
     static int length=1, count=0;
     static String currentCurrency;
     static String[] accounts = new String[length];
-    static double[] balance = new double [length];
+    static float[] balance = new float [length];
     static int[] userNumber = new int [length];
     static String[] currency = {"PHP", "USD", "JPY"};
 
@@ -140,7 +140,8 @@ public class BankingApp {
         }
 
         while(choice<5 && choice > 0);
-        
+
+
     sc.close();
 
     }
