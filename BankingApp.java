@@ -140,30 +140,8 @@ public class BankingApp {
         }
 
         while(choice<5 && choice > 0);
-
-
         
-
-
-      
-
-
-
-
-
-
-
-
-
-
-
     sc.close();
-
-
-
-
-
-        
 
     }
 
